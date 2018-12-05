@@ -21,7 +21,7 @@ restService.post("/echo", function(req, res) {
       ? req.body.queryResult.parameters.echoText
       : "Seems like some problem. Speak again.";
   return res.json({
-    speech: speech,
+    //speech: speech,
     fulfillmentText: speech,
     payload : { google : { expectUserResponse : true, richResponse : {items : [{simpleResponse : {textToSpeech : speech}}]}} },
     source: "webhook-echo-sample"
