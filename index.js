@@ -23,6 +23,7 @@ restService.post("/echo", function(req, res) {
   return res.json({
     speech: speech,
     fulfillmentText: speech,
+    payload : { google : { expectUserResponse : true, richResponse : {items : [{simpleResponse : {textToSpeech : speech}}]}} },
     source: "webhook-echo-sample"
   });
 });
